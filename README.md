@@ -86,8 +86,7 @@ For a more permanent and accessible solution, consider using free hosting servic
 ---
 
 ## ✍️ Author
-
-* **[Your Name/Alias]** - (Optional: Link to your GitHub profile or personal website)
+Dark Horse
 
 ---
 
