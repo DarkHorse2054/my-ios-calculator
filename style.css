@@ -1,0 +1,99 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0e0e0; /* Light gray background */
+    font-family: 'SF Pro Display', 'Helvetica Neue', Helvetica, Arial, sans-serif; /* iOS-like font stack */
+    margin: 0;
+}
+
+.calculator {
+    background-color: #1c1c1c; /* Dark background for the calculator body */
+    border-radius: 30px; /* Rounded corners for the calculator */
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    width: 320px; /* Typical iPhone calculator width */
+}
+
+.display {
+    color: #ffffff;
+    font-size: 6em; /* Large font size for display */
+    text-align: right;
+    padding: 20px 10px;
+    overflow: hidden; /* Hide overflowing text */
+    white-space: nowrap; /* Prevent text wrapping */
+    margin-bottom: 10px;
+    min-height: 90px; /* Ensure consistent display height */
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 12px; /* Spacing between buttons */
+}
+
+.button {
+    border: none;
+    border-radius: 50%; /* Circular buttons */
+    font-size: 2.2em;
+    height: 70px; /* Fixed height for circular buttons */
+    width: 70px; /* Fixed width for circular buttons */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease; /* Smooth transitions */
+    color: #ffffff; /* Default text color for buttons */
+    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on iOS */
+}
+
+/* Number buttons */
+.button.number {
+    background-color: #333333; /* Dark gray for number buttons */
+}
+
+.button.number:active {
+    background-color: #555555; /* Slightly lighter on press */
+    transform: scale(0.95); /* Slight shrink on press */
+}
+
+/* Function buttons (AC, +/-, %) */
+.button.function {
+    background-color: #a5a5a5; /* Light gray for function buttons */
+    color: #1c1c1c; /* Dark text for light buttons */
+}
+
+.button.function:active {
+    background-color: #bfbfbf;
+    transform: scale(0.95);
+}
+
+/* Operator buttons (+, -, ×, ÷) */
+.button.operator {
+    background-color: #ff9500; /* iOS orange */
+}
+
+.button.operator:active {
+    background-color: #ffb74d; /* Lighter orange on press */
+    transform: scale(0.95);
+}
+
+.button.operator.active {
+    background-color: #ffffff; /* White when active */
+    color: #ff9500; /* Orange text when active */
+}
+
+/* Zero button - spans two columns */
+.button.zero {
+    grid-column: span 2;
+    width: unset; /* Override fixed width */
+    border-radius: 35px; /* Rounded rectangle for zero button */
+    justify-content: flex-start; /* Align text to start */
+    padding-left: 25px;
+}
+
+.button.zero:active {
+    background-color: #555555;
+    transform: scale(0.95);
+}
